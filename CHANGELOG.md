@@ -30,6 +30,12 @@ For support you can use [the contact form](https://contact.faircode.eu/?product=
 
 ### Next version (Work in progress)
 
+* Fixed all reported bugs
+* Small improvements and minor bug fixes
+* Updated [Public Suffix List](https://github.com/publicsuffix/list)
+* Updated [S/MIME root certificates](https://wiki.mozilla.org/CA/Included_Certificates)
+* Updated [translations](https://crowdin.com/project/open-source-email)
+
 ### 1.2322 2026-06-15
 
 * Updated [IPAddress library](https://seancfoley.github.io/IPAddress/) to fix an issue

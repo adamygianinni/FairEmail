@@ -30,6 +30,12 @@ Elopteryx
 
 Next version (Work in progress)
 
+* Fixed all reported bugs
+* Small improvements and minor bug fixes
+* Updated Public Suffix List
+* Updated S/MIME root certificates
+* Updated translations
+
 1.2322 2026-06-15
 
 * Updated IPAddress library to fix an issue
