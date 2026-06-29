@@ -30,7 +30,9 @@ For support you can use [the contact form](https://contact.faircode.eu/?product=
 
 ### Next version (Work in progress)
 
-* Fixed all reported bugs
+### 1.2323 2026-06-29
+
+* Fixed insets of two row/column mode and undo bar
 * Small improvements and minor bug fixes
 * Updated [Public Suffix List](https://github.com/publicsuffix/list)
 * Updated [S/MIME root certificates](https://wiki.mozilla.org/CA/Included_Certificates)
