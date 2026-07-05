@@ -268,7 +268,7 @@ public class FragmentCompose extends FragmentBase {
     private TextView tvResend;
     private TextView tvPlainTextOnly;
     private EditTextCompose etBody;
-    private ImageView ivMarkdown;
+    private ImageView ibMarkdown;
     private TextView tvNoInternet;
     private TextView tvSignature;
     private CheckBox cbSignature;
@@ -432,7 +432,7 @@ public class FragmentCompose extends FragmentBase {
         tvResend = view.findViewById(R.id.tvResend);
         tvPlainTextOnly = view.findViewById(R.id.tvPlainTextOnly);
         etBody = view.findViewById(R.id.etBody);
-        ivMarkdown = view.findViewById(R.id.ivMarkdown);
+        ibMarkdown = view.findViewById(R.id.ibMarkdown);
         tvNoInternet = view.findViewById(R.id.tvNoInternet);
         tvSignature = view.findViewById(R.id.tvSignature);
         cbSignature = view.findViewById(R.id.cbSignature);
@@ -925,6 +925,13 @@ public class FragmentCompose extends FragmentBase {
             }
         });
 
+        ibMarkdown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Helper.viewFAQ(v.getContext(), 99);
+            }
+        });
+
         if (compose_color != Color.TRANSPARENT)
             tvSignature.setTextColor(compose_color);
         tvSignature.setTypeface(StyleHelper.getTypeface(compose_font, getContext()));
@@ -1225,7 +1232,7 @@ public class FragmentCompose extends FragmentBase {
         tvPlainTextOnly.setVisibility(View.GONE);
         etBody.setText(null);
         etBody.setHint(null);
-        ivMarkdown.setVisibility(View.GONE);
+        ibMarkdown.setVisibility(View.GONE);
 
         grpHeader.setVisibility(View.GONE);
         grpExtra.setVisibility(View.GONE);
@@ -6525,15 +6532,15 @@ public class FragmentCompose extends FragmentBase {
                         for (EntityAttachment attachment : attachments)
                             if (attachment.subsequence == null
                                     ? !attachment.isEncryption() &&
-                                    (cid.contains(attachment.cid) ||
-                                            !("reply".equals(action) || "reply_all".equals(action)))
+                                      (cid.contains(attachment.cid) ||
+                                       !("reply".equals(action) || "reply_all".equals(action)))
                                     : "forward".equals(action) &&
-                                    tnef.size() == 1 &&
+                                      tnef.size() == 1 &&
                                     attachment.sequence.equals(tnef.get(0).sequence) &&
-                                    !"subject.txt".equals(attachment.name) &&
-                                    !"body.html".equals(attachment.name) &&
-                                    !"body.rtf".equals(attachment.name) &&
-                                    !"attributes.txt".equals(attachment.name)) {
+                                      !"subject.txt".equals(attachment.name) &&
+                                      !"body.html".equals(attachment.name) &&
+                                      !"body.rtf".equals(attachment.name) &&
+                                      !"attributes.txt".equals(attachment.name)) {
                                 if (attachment.available) {
                                     File source = attachment.getFile(context);
 
@@ -8376,7 +8383,7 @@ public class FragmentCompose extends FragmentBase {
                 etBody.setHint(hint);
 
                 grpBody.setVisibility(View.VISIBLE);
-                ivMarkdown.setVisibility(markdown ? View.VISIBLE : View.GONE);
+                ibMarkdown.setVisibility(markdown ? View.VISIBLE : View.GONE);
 
                 cbSignature.setChecked(draft.signature);
                 ibSignature.setEnabled(draft.signature);

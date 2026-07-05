@@ -344,7 +344,7 @@ Anything on this list is in random order and *might* be added in the near future
 * [(96) Where can I find the IMAP and SMTP settings?](#faq96)
 * [(97) What is 'cleanup'?](#faq97)
 * [(98) Why can I still pick contacts after revoking contacts permissions?](#faq98)
-* [(99) Can you add a rich text or markdown editor?](#faq99)
+* [(99) What should I know about Markdown?](#faq99)
 * [(100) How can I synchronize Gmail categories?](#faq100)
 * [(101) What does the blue/orange dot at the bottom of the conversations mean?](#faq101)
 * [(102) How can I enable auto rotation of images?](#faq102)
@@ -3851,16 +3851,18 @@ However, picking contacts is delegated to and done by Android and not by FairEma
 <br />
 
 <a name="faq99"></a>
-**(99) Can you add a rich text or markdown editor?**
+**(99) What should I know about Markdown?**
 
 &#x1F30E; [Google Translate](https://translate.google.com/translate?sl=en&u=https%3A%2F%2Fm66b.github.io%2FFairEmail%2F%23faq99)
 
-FairEmail provides common text formatting (bold, italic, underline, text size and color) via a toolbar that appears after selecting some text.
+FairEmail provides common text formatting (bold, italic, underline, text size and color, etc.) via a toolbar that appears after selecting some text.
 
-A [Rich text](https://en.wikipedia.org/wiki/Formatted_text) or [Markdown](https://en.wikipedia.org/wiki/Markdown) editor
-would not be used by many people on a small mobile device and, more important,
-Android doesn't support a rich text editor and most rich text editor open source projects are abandoned.
-See [here](https://forum.xda-developers.com/showpost.php?p=79061829&postcount=4919) for some more details about this.
+Alternatively, you can use [Markdown](https://en.wikipedia.org/wiki/Markdown).
+You can enable Markdown support via the three-dot overflow menu at the top right of the message editor.
+
+Please be aware that **normal styling will be ignored** when using Markdown, or, in other words, you can mix.
+
+Markdown is an experimental feature.
 
 <br />
 
