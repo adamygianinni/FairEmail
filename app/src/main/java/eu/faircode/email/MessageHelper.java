@@ -3609,7 +3609,9 @@ public class MessageHelper {
                 String email = address.getAddress();
                 String personal = address.getPersonal();
 
-                if (TextUtils.isEmpty(personal) || format == AddressFormat.EMAIL_ONLY)
+                if (format == AddressFormat.EMAIL_ONLY ||
+                        TextUtils.isEmpty(personal) ||
+                        PatternsCompat.AUTOLINK_EMAIL_ADDRESS.matcher(personal).find())
                     formatted.add(TextUtils.isEmpty(email) ? "<>" : email);
                 else {
                     if (compose) {
